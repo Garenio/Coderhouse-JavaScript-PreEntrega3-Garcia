@@ -51,7 +51,7 @@ header {
     align-items: center;
 }
 
-.navBar ul li {
+.navBar ul li a {
     color: rgb(24, 24, 24);
     text-decoration: none;
     margin: 1rem;
@@ -59,7 +59,11 @@ header {
     font-weight: 500;
 }
 
-.homeContent {
+.navBar ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.homeDiv {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -68,7 +72,7 @@ header {
     font-size: 1.5rem;
 }
 
-.homeContent ul {
+.homeDiv ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,14 +80,15 @@ header {
     margin: 1rem;
 }
 
-.homeContent h1 {
+.homeDiv h1 {
     font-size: 3rem;
     font-weight: bold;
     color: rgb(235, 202, 52);
+    text-shadow: 1px 1px 2px black;
     margin: 1rem 0;
 }
 
-.homeContent ul span {
+.homeDiv ul span {
     font-weight: bold;
     color: white;
     text-shadow: 1px 1px 2px black;
