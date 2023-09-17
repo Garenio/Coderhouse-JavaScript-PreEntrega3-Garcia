@@ -8,6 +8,7 @@ const characters = [
         gold: 250,
         playerName: "Eugenio",
         isActive: true,
+        image: "../assets/mithrandir.jpg"
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const characters = [
         gold: 450,
         playerName: "Carlos",
         isActive: true,
+        image: "../assets/heos.jpg"
     },
     {
         id: 3,
@@ -28,6 +30,7 @@ const characters = [
         gold: 1480,
         playerName: "Pablo",
         isActive: false,
+        image: "../assets/melkor.jpg"
     },
     {
         id: 4,
@@ -38,6 +41,7 @@ const characters = [
         gold: 300,
         playerName: "Javier",
         isActive: true,
+        image: "../assets/yorim.jpg"
     },
     {
         id: 5,
@@ -48,6 +52,7 @@ const characters = [
         gold: 3500,
         playerName: "Juan",
         isActive: true,
+        image: "../assets/sanga.jpg"
     },
     {
         id: 6,
@@ -58,6 +63,7 @@ const characters = [
         gold: 1200,
         playerName: "Pablo",
         isActive: true,
+        image: "../assets/valamarth.jpg"
     },
     {
         id: 7,
@@ -68,6 +74,7 @@ const characters = [
         gold: 800,
         playerName: "Javier",
         isActive: false,
+        image: "../assets/rauko.jpg"
     },
     {
         id: 8,
@@ -78,6 +85,7 @@ const characters = [
         gold: 9200,
         playerName: "Eugenio",
         isActive: true,
+        image: "../assets/ulmi.jpg"
     },
     {
         id: 9,
@@ -88,15 +96,17 @@ const characters = [
         gold: 7300,
         playerName: "Carlos",
         isActive: false,
+        image: "../assets/shinji.jpg"
     },
     {
         id: 10,
-        charName: "Ardumat",
+        charName: "Ardanal",
         race: "Humano",
         charClass: "Sanador",
         level: 20,
         gold: 7800,
-        playerName: "Juan",
+        playerName: "Andrea",
         isActive: true,
+        image: "../assets/ardanal.jpg"
     },
 ];
