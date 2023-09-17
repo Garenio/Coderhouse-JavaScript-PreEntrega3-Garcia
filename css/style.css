@@ -11,7 +11,7 @@
 body {
     min-height: 100vh;
     background: rgb(240,240,240);
-    background: radial-gradient(circle, rgba(240,240,240,1) 0%, rgba(98,98,98,1) 100%);
+    background: radial-gradient(circle, rgb(133, 133, 133) 0%, rgb(48, 48, 48) 100%);
 }
 
 header {
@@ -59,16 +59,32 @@ header {
     font-weight: 500;
 }
 
-main {
+.homeContent {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
 }
 
-main ul {
+.homeContent ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    margin: 1rem;
+}
+
+.homeContent h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(235, 202, 52);
+    margin: 1rem 0;
+}
+
+.homeContent ul span {
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
