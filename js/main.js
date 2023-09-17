@@ -52,21 +52,40 @@ characters.forEach((el) => {
 
     // ----------------- Card Buttons --------------------//
 
+    let cardButtons = document.createElement("div");          
+    cardButtons.className = "character-card__buttons"; 
+
     let buttonGiveMoney = document.createElement("button");
-    buttonGiveMoney.innerText = `Dar dinero`;
-    buttonGiveMoney.className = "btn-give-money";
-
-    buttonGiveMoney.onclick = () => giveMoney(el.id);
-
-    card.appendChild(buttonGiveMoney);
+    let buttonGiveMoneySpan = document.createElement("span");
+    buttonGiveMoneySpan.innerText = `monetization_on`;
+    buttonGiveMoneySpan.className = "material-symbols-outlined";
+    buttonGiveMoneySpan.title = "Dar dinero"
+    buttonGiveMoney.appendChild(buttonGiveMoneySpan);
     
     let buttonGiveLevel = document.createElement("button");
-    buttonGiveLevel.innerText = `Dar nivel`;
-    buttonGiveLevel.className = "btn-give-level";
+    let buttonGiveLevelSpan = document.createElement("span");
+    buttonGiveLevelSpan.innerText = `shift`;
+    buttonGiveLevelSpan.className = "material-symbols-outlined";
+    buttonGiveLevelSpan.title = "Dar nivel"
+    buttonGiveLevel.appendChild(buttonGiveLevelSpan);
 
-    buttonGiveLevel.onclick = () => giveLoney(el.id);
+    let buttonDelChar = document.createElement("button");
+    let buttonDelCharSpan = document.createElement("span");
+    buttonDelCharSpan.innerText = `delete`  
+    buttonDelCharSpan.className = "material-symbols-outlined";
+    buttonDelCharSpan.title = "Eliminar personaje"
+    buttonDelChar.appendChild(buttonDelCharSpan);
 
-    card.appendChild(buttonGiveLevel);
+    buttonGiveMoney.onclick = () => giveMoney(el.id);
+    buttonGiveLevel.onclick = () => giveLevel(el.id);
+    buttonDelChar.onclick = () => deleteCharacter(el.id);
+
+    cardButtons.appendChild(buttonGiveMoney);
+    cardButtons.appendChild(buttonGiveLevel);
+    cardButtons.appendChild(buttonDelChar);
+    card.appendChild(cardButtons);
+
+    // ----------------- Fin de la card --------------------//
 
     charactersCointeiner.appendChild(card);
 
