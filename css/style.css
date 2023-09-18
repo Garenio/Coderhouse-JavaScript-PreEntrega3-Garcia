@@ -157,3 +157,30 @@ header {
     cursor: pointer;
     padding: 0.5rem 0;
 }
+
+.pick-char-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    
+}
+
+.pick-character-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 180px;
+    background-color: rgba(255, 255, 255, 0.74);
+    margin: 1rem 0.5rem;
+    border-radius: 90px 90px 20px 20px;
+    padding-bottom: 0.8rem;
+}
+
+.pick-character-card__logo img {
+    margin-top: 14px;
+    height: 150px;
+    border-radius: 50%;
+}

@@ -1,27 +1,28 @@
-// Creación de Cards para la página "Personajes"
 
-let charactersContainer = document.getElementById("characters-container");
+// Creación de Cards para la página "Party Maker"
+
+let pickCharContainer = document.getElementById("pick-char-container");
 
 characters.forEach((el) => {
 
-    let card = document.createElement("div");
-    card.className = "character-card";     
+    let pickCard = document.createElement("div");
+    pickCard.className = "pick-character-card";     
     
     // ----------------- Card Logo --------------------//
 
     let cardLogo = document.createElement("div");
-    cardLogo.className = "character-card__logo";            
+    cardLogo.className = "pick-character-card__logo";            
 
     let avatar = document.createElement("img");
     avatar.src = el.image;
 
     cardLogo.appendChild(avatar);
-    card.appendChild(cardLogo);
+    pickCard.appendChild(cardLogo);
 
     // ----------------- Card Info --------------------//
 
     let cardInfo = document.createElement("div");          
-    cardInfo.className = "character-card__info";            
+    cardInfo.className = "pick-character-card__info";            
 
     let charName = document.createElement("h3");
     charName.innerText = `${el.charName}`;
@@ -31,12 +32,6 @@ characters.forEach((el) => {
     
     let charClass = document.createElement("p");
     charClass.innerText = `Clase: ${el.charClass}`;
-    
-    let level = document.createElement("p");
-    level.innerText = `Nivel: ${el.level}`;
-
-    let gold = document.createElement("p");
-    gold.innerText = `Oro: ${el.gold}`;
 
     let playerName = document.createElement("p");
     playerName.innerText = `Jugador: ${el.playerName}`;
@@ -45,15 +40,13 @@ characters.forEach((el) => {
     cardInfo.appendChild(charName);
     cardInfo.appendChild(race);
     cardInfo.appendChild(charClass);
-    cardInfo.appendChild(level);
-    cardInfo.appendChild(gold);
     cardInfo.appendChild(playerName);
-    card.appendChild(cardInfo);
+    pickCard.appendChild(cardInfo);
 
     // ----------------- Card Buttons --------------------//
 
     let cardButtons = document.createElement("div");          
-    cardButtons.className = "character-card__buttons"; 
+    cardButtons.className = "pick-character-card__buttons"; 
 
     let buttonGiveMoney = document.createElement("button");
     let buttonGiveMoneySpan = document.createElement("span");
@@ -83,10 +76,10 @@ characters.forEach((el) => {
     cardButtons.appendChild(buttonGiveMoney);
     cardButtons.appendChild(buttonGiveLevel);
     cardButtons.appendChild(buttonDelChar);
-    card.appendChild(cardButtons);
+    pickCard.appendChild(cardButtons);
 
     // ----------------- Fin de la card --------------------//
 
-    charactersContainer.appendChild(card);
+    pickCharContainer.appendChild(pickCard);
 
 });
