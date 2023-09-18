@@ -4,8 +4,8 @@ const characters = [
         charName: "Mithandir",
         race: "Elfo",
         charClass: "Mago",
-        level: 7,
-        gold: 250,
+        level: 10,
+        gold: 4250,
         playerName: "Eugenio",
         isActive: true,
         image: "../assets/mithrandir.jpg"
@@ -15,8 +15,8 @@ const characters = [
         charName: "Heos",
         race: "Humano",
         charClass: "Paladín",
-        level: 6,
-        gold: 450,
+        level: 12,
+        gold: 7450,
         playerName: "Carlos",
         isActive: true,
         image: "../assets/heos.jpg"

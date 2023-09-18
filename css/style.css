@@ -11,10 +11,16 @@
 body {
     min-height: 100vh;
     background: rgb(240,240,240);
-    background: radial-gradient(circle, rgb(133, 133, 133) 0%, rgb(48, 48, 48) 100%);
+    background-image: url("../assets/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,8 +28,8 @@ header {
     height: 70px;
     background: rgb(255,229,173);
     background: linear-gradient(180deg, rgba(255,229,173,1) 0%, rgba(253,187,45,1) 100%);
-
     border-bottom: 0.2rem solid rgb(255, 255, 255);
+    position: sticky;
 }
 
 .headerLogo {
@@ -70,6 +76,7 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+    color: rgb(255, 255, 255);
 }
 
 .homeDiv ul {
@@ -78,6 +85,7 @@ header {
     justify-content: center;
     align-items:center;
     margin: 1rem;
+
 }
 
 .homeDiv h1 {
@@ -86,11 +94,12 @@ header {
     color:#FDBF39;
     text-shadow: 1px 1px 2px black;
     margin: 1rem 0;
+    font-family: 'MedievalSharp', cursive;
 }
 
 .homeDiv ul span {
     font-weight: bold;
-    color: white;
+    color: #FDBF39;
     text-shadow: 1px 1px 2px black;
 }
 
@@ -108,7 +117,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1.5rem;
+    margin: 1rem 0;
     background-color: rgb(255, 255, 254);
     border-radius: 20px;
     box-shadow: 3px 3px 10px black;
@@ -126,6 +135,7 @@ header {
 .character-card__info h3 {
     margin-bottom: 0.6rem;
     font-size: 2rem;
+    font-family: 'MedievalSharp', cursive;
 }
 
 .character-card__buttons {
