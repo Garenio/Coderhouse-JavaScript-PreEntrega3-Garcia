@@ -15,8 +15,6 @@ function addToParty(id) {
             party.push({
                 ...charToAdd,
             });
-    
-            console.log("Agregado")
             Toastify({
                 text: "Personaje agregado correctamente.",
                 duration: 3000,
@@ -103,6 +101,7 @@ function showParty() {
     let buttonCreateParty = document.createElement("button");
     buttonCreateParty.innerText = `Crear Party`;
     buttonCreateParty.className = "btn btn-create-party";
+    buttonCreateParty.onclick = createParty;
 
     let buttonClearAll = document.createElement("button");
     buttonClearAll.innerText = `Borrar Todo`;
@@ -122,3 +121,44 @@ function clearAll() {
     localStorage.setItem("party",(JSON.stringify(party)))
     showParty();
 };
+
+function removeCharacter(index) {
+
+    party.splice(index, 1);
+    localStorage.setItem("party", JSON.stringify(party));
+    showParty();
+
+    Toastify({
+        text: "Personaje eliminado de la party.",
+        duration: 3000,
+    }).showToast();
+
+}
+
+function createParty() {
+    if (party.length < 5) {
+        Toastify({
+            text: "Debe haber 5 jugadores para poder crear la party.",
+            duration: 3000,
+        }).showToast();
+    } else{
+        Swal.fire({
+            title: `¿Estás seguro/a que quieres crear la party?`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Confirmar',
+            cancelButtonText: 'Modificar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: '¡Party creada exitosamente!',
+                    icon: 'success',
+                    text: `La party ha sido creada con los siguientes personajes: ${party[0].charName} | ${party[1].charName} | ${party[2].charName} | ${party[3].charName} | ${party[4].charName}`,
+                })
+                localStorage.setItem("party", JSON.stringify(party));
+                showParty();
+            };
+        });
+    }
+
+}

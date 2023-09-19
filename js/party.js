@@ -65,5 +65,3 @@ characters.forEach((el) => {
 
 let party = JSON.parse(localStorage.getItem("party")) || [];
 showParty()
-
-buttonCreateParty.onclick = createParty;
