@@ -59,21 +59,21 @@ characters.forEach((el) => {
     let buttonGiveMoneySpan = document.createElement("span");
     buttonGiveMoneySpan.innerText = `monetization_on`;
     buttonGiveMoneySpan.className = "material-symbols-outlined";
-    buttonGiveMoneySpan.title = "Dar dinero"
+    buttonGiveMoneySpan.title = "Dar dinero (Deshabilitado)"
     buttonGiveMoney.appendChild(buttonGiveMoneySpan);
     
     let buttonGiveLevel = document.createElement("button");
     let buttonGiveLevelSpan = document.createElement("span");
     buttonGiveLevelSpan.innerText = `shift`;
     buttonGiveLevelSpan.className = "material-symbols-outlined";
-    buttonGiveLevelSpan.title = "Dar nivel"
+    buttonGiveLevelSpan.title = "Dar nivel (Deshabilitado)"
     buttonGiveLevel.appendChild(buttonGiveLevelSpan);
 
     let buttonDelChar = document.createElement("button");
     let buttonDelCharSpan = document.createElement("span");
     buttonDelCharSpan.innerText = `delete`  
     buttonDelCharSpan.className = "material-symbols-outlined";
-    buttonDelCharSpan.title = "Eliminar personaje"
+    buttonDelCharSpan.title = "Eliminar personaje (Deshabilitado)"
     buttonDelChar.appendChild(buttonDelCharSpan);
 
     buttonGiveMoney.onclick = () => giveMoney(el.id);

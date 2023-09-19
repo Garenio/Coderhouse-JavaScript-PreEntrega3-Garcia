@@ -163,6 +163,8 @@ header {
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: center;
+    max-height:50vh;
+    overflow-y:scroll;
     
 }
 
@@ -172,15 +174,78 @@ header {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    width: 180px;
+    width: 250px;
     background-color: rgba(255, 255, 255, 0.74);
     margin: 1rem 0.5rem;
-    border-radius: 90px 90px 20px 20px;
+    border-radius: 125px 125px 20px 20px;
     padding-bottom: 0.8rem;
 }
 
 .pick-character-card__logo img {
     margin-top: 14px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.pick-character-card__info {
+    padding: 0.5rem 0;
+}
+
+.party-container {
+    height: fit-content;
+    min-height: 40vh;
+    background-color: #ffffff93;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+.party-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:fit-content;
+    width: 200px;
+    padding: 1rem;
+}
+
+.party-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:fit-content;
+    width: 200px;
+}
+
+.party-card__logoinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.party-card__logoinfo img {
     height: 150px;
     border-radius: 50%;
+}
+
+.btn {
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.party-title {
+    font-size: 2rem;
+    padding: 0.5rem;
+    font-family: 'MedievalSharp', cursive;
+    font-weight: bold;
 }

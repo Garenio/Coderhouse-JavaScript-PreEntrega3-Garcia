@@ -48,34 +48,13 @@ characters.forEach((el) => {
     let cardButtons = document.createElement("div");          
     cardButtons.className = "pick-character-card__buttons"; 
 
-    let buttonGiveMoney = document.createElement("button");
-    let buttonGiveMoneySpan = document.createElement("span");
-    buttonGiveMoneySpan.innerText = `monetization_on`;
-    buttonGiveMoneySpan.className = "material-symbols-outlined";
-    buttonGiveMoneySpan.title = "Dar dinero"
-    buttonGiveMoney.appendChild(buttonGiveMoneySpan);
-    
-    let buttonGiveLevel = document.createElement("button");
-    let buttonGiveLevelSpan = document.createElement("span");
-    buttonGiveLevelSpan.innerText = `shift`;
-    buttonGiveLevelSpan.className = "material-symbols-outlined";
-    buttonGiveLevelSpan.title = "Dar nivel"
-    buttonGiveLevel.appendChild(buttonGiveLevelSpan);
+    let buttonAddToParty = document.createElement("button");
+    buttonAddToParty.innerText = `Agregar a la Party`;
+    buttonAddToParty.className = "btn btn-add";
 
-    let buttonDelChar = document.createElement("button");
-    let buttonDelCharSpan = document.createElement("span");
-    buttonDelCharSpan.innerText = `delete`  
-    buttonDelCharSpan.className = "material-symbols-outlined";
-    buttonDelCharSpan.title = "Eliminar personaje"
-    buttonDelChar.appendChild(buttonDelCharSpan);
+    buttonAddToParty.onclick = () => addToParty(el.id);
 
-    buttonGiveMoney.onclick = () => giveMoney(el.id);
-    buttonGiveLevel.onclick = () => giveLevel(el.id);
-    buttonDelChar.onclick = () => deleteCharacter(el.id);
-
-    cardButtons.appendChild(buttonGiveMoney);
-    cardButtons.appendChild(buttonGiveLevel);
-    cardButtons.appendChild(buttonDelChar);
+    cardButtons.appendChild(buttonAddToParty);
     pickCard.appendChild(cardButtons);
 
     // ----------------- Fin de la card --------------------//
@@ -83,3 +62,8 @@ characters.forEach((el) => {
     pickCharContainer.appendChild(pickCard);
 
 });
+
+let party = JSON.parse(localStorage.getItem("party")) || [];
+showParty()
+
+buttonCreateParty.onclick = createParty;
