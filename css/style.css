@@ -211,7 +211,7 @@ header {
     align-items: center;
     height:fit-content;
     width: 200px;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 .party-card-container {
@@ -233,14 +233,7 @@ header {
 .party-card__logoinfo img {
     height: 150px;
     border-radius: 50%;
-}
-
-.btn {
-    padding: 0.5rem;
-    border-radius: 10px;
-    border: none;
-    margin: 1rem;
-    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .party-title {
@@ -250,4 +243,38 @@ header {
     font-weight: bold;
 }
 
+.btn {
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    margin: 0.5rem;
+    font-weight: bold;
+}
 
+.btn-remove-char {
+    background-color: rgb(224, 110, 110);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 5px;
+    
+}
+
+.btn-create-party {
+    background-color: rgb(170, 224, 115);
+    font-size: 0.8rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.404);
+}
+
+.btn-clear-all {
+    background-color: rgb(224, 110, 110);
+    font-size: 0.8rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.404);
+}
+
+.btn-add {
+    background-color: rgb(247, 202, 107);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.404);
+}

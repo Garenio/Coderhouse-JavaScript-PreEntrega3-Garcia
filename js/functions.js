@@ -80,7 +80,7 @@ function showParty() {
     
             let btnRemove = document.createElement("button");
             btnRemove.onclick = () => removeCharacter(index);
-            btnRemove.innerText = "X";
+            btnRemove.innerText = "Quitar";
             btnRemove.className = "btn-remove-char";
     
             partyCardButtons.appendChild(btnRemove);
@@ -105,7 +105,7 @@ function showParty() {
 
     let buttonClearAll = document.createElement("button");
     buttonClearAll.innerText = `Borrar Todo`;
-    buttonClearAll.className = "btn btn-create-party";
+    buttonClearAll.className = "btn btn-clear-all";
     buttonClearAll.onclick = clearAll;
 
     partyButtons.appendChild(buttonCreateParty);

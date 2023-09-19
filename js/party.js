@@ -6,8 +6,8 @@ let pickCharContainer = document.getElementById("pick-char-container");
 characters.forEach((el) => {
 
     let pickCard = document.createElement("div");
-    pickCard.className = "pick-character-card";     
-    
+    pickCard.className = "pick-character-card";
+         
     // ----------------- Card Logo --------------------//
 
     let cardLogo = document.createElement("div");
